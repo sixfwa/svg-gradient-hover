@@ -32,10 +32,10 @@ const Flame = ({ cursor, cardRef, mouseOnCard }: Props) => {
           id="emeraldGradient"
           gradientUnits="userSpaceOnUse"
           r="35%"
-          cx="50%"
-          cy="40%"
+          cx={gradientCenter.cx}
+          cy={gradientCenter.cy}
         >
-          <stop stopColor="#10b981" />
+          {mouseOnCard && <stop stopColor="#10b981" />}
           <stop offset={1} stopColor="#404040" />
         </radialGradient>
       </defs>
